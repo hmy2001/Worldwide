@@ -63,7 +63,6 @@ func (cpu *CPU) getTimerFlag() bool {
 func (cpu *CPU) setTimerFlag() {
 	IF := cpu.fetchIO(IFIO) | 0x04
 	cpu.setIO(IFIO, IF)
-	cpu.halt = false
 }
 
 func (cpu *CPU) clearTimerFlag() {
